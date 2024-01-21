@@ -26,7 +26,7 @@ public class Livro extends Funcoes {
 		for (int i = 0; i < autor.length; i++) {
 			String nome = this.receberString("digite o nome do livro " + (i + 1) + " :");
 			String autor = this.receberString("digite o nome do autor " + (i + 1) + " :");
-			int ano = this.receberInt("digite o ano de lançamento do livro " + (i + 1) + " :");
+			int ano = this.receberInt("digite o ano de lanï¿½amento do livro " + (i + 1) + " :");
 
 			this.titulo[i] = nome;
 			this.autor[i] = autor;
@@ -38,7 +38,7 @@ public class Livro extends Funcoes {
 			if (this.ano[i] != this.ano[i]) {
 				_ano = false;
 			}if(_ano ==false) {
-			this.telaString("");	
+			this.tela("");	
 			}
 			if (this.titulo[i] != this.titulo[i]) {
 				_nome = false;
@@ -54,20 +54,20 @@ public class Livro extends Funcoes {
 		String saida = "";
 		for (int i = 0; i < ano.length; i++) {
 			if (this.autor[i] != "") {
-				saida += "Titulo- " + this.titulo[i] + ",  Autor-" + this.autor[i] + ", Lançamento- " + this.ano[i]
+				saida += "Titulo- " + this.titulo[i] + ",  Autor-" + this.autor[i] + ", Lanï¿½amento- " + this.ano[i]
 						+ "\n";
 
 			}
 
 		}
-		this.telaString(saida);
+		this.tela(saida);
 
 	}
 
 	public Object selecionar() {
 		Object[] possibilidades = { "remover um titulo", "pesquisar um titulo" };
 
-		Object selecionado = JOptionPane.showInputDialog(null, "escolha o que fazer a seguir:", "Opções:",
+		Object selecionado = JOptionPane.showInputDialog(null, "escolha o que fazer a seguir:", "Opï¿½ï¿½es:",
 				JOptionPane.INFORMATION_MESSAGE, null, possibilidades, possibilidades[0]);
 
 		return selecionado.toString();
@@ -90,13 +90,13 @@ public class Livro extends Funcoes {
 		boolean se = false;
 		for (int i = 0; i < titulo.length; i++) {
 			if (titulo[i].equalsIgnoreCase(a)) {
-				this.telaString("Livro pesquisado: " + this.titulo[i] + ", nome do autor: " + this.autor[i]
-						+ ", ano de lançamento: " + this.ano[i]);
+				this.tela("Livro pesquisado: " + this.titulo[i] + ", nome do autor: " + this.autor[i]
+						+ ", ano de lanï¿½amento: " + this.ano[i]);
 				se = true;
 			}
 		}
 		if (se == false) {
-			this.telaString("pesquisa não corresponde a nenhum livro");
+			this.tela("pesquisa nï¿½o corresponde a nenhum livro");
 		}
 	}
 
@@ -114,7 +114,7 @@ public class Livro extends Funcoes {
 
 		}
 		if (se == false) {
-			this.telaString("nome não corresponde com nenhum livro registrado");
+			this.tela("nome nï¿½o corresponde com nenhum livro registrado");
 		}
 
 	}

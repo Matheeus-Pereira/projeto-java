@@ -4,11 +4,11 @@ import javax.swing.JOptionPane;
 
 public abstract class Funcoes {
 
-	public void telaString(String i) {
+	public void tela(String i) {
 		JOptionPane.showMessageDialog(null, i);
 	}
 
-	public void telaDouble(double i) {
+	public void tela(double i) {
 		JOptionPane.showMessageDialog(null, i);
 	}
 
@@ -25,7 +25,7 @@ public abstract class Funcoes {
 
 	public void escrever_vetor(String[] a) {
 		for (int i = 0; i <= a.length; i++) {
-			this.telaString(a[i]);
+			this.tela(a[i]);
 		}
 
 	}
